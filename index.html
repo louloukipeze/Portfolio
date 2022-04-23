@@ -153,6 +153,16 @@
                                 <a href="#home-mission" data-w-id="53bcd881-6281-2721-0de8-edb572f8430f" class="home-header_scroll-down-wrapper w-inline-block">
                                     <img src="https://uploads-ssl.webflow.com/61d4b50a3b130a78a63644fe/61e57d8b90fc179ba29d7f0c_Group%2016.svg" loading="lazy" alt="" class="home-header_scroll-down-icon"/>
                                 </a>
+                                <div class="social-icon-container">
+                                    <input type="checkbox" class="checkbox" id="chk" />
+                                    <label class="label" for="chk">
+                                        <div class="ball" id="toggle">
+                                            <span id="span">
+                                                <ion-icon name="bulb-outline" id="bulb"></ion-icon>
+                                            </span>
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -452,5 +462,26 @@
     </div>
     <script async src="cdn.js"></script>
     <script src="https://uploads-ssl.webflow.com/61d4b50a3b130a78a63644fe/js/webflow.7e5fe7a15.js" type="text/javascript"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const chk = document.getElementById('chk');
+        const toggle = document.getElementById ('toggle');
+        const bulb = document.getElementById ('bulb');
+        chk.addEventListener('change', () => {
+	    document.body.classList.toggle('active');
+        toggle.classList.toggle('active');
+        bulb.classList.toggle('active');
+        if (toggle.classList.contains("active") == true)
+        {
+            toggle.style.left="160px";
+
+        }
+        else
+        {
+            toggle.style.left="0";
+        
+        }});
+    </script>
 </body>
 </htm>
